@@ -1,1 +1,1 @@
-PierreFeuilleCiseauLezardSpock est uen version amelioree du jeu Pierre/Papier/Ciseaux
+PierreFeuilleCiseauLezardSpock est une version amelioree du jeu Pierre/Papier/Ciseaux
