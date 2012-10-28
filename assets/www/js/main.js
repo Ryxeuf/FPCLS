@@ -73,8 +73,27 @@ function init(){
 			$.mobile.changePage("#easteregg");
 		}
 	});
+	
+	
+	$('[data-role=page]').live('pageshow', function (event, ui) {
+	    try {
+	        _gaq.push(['_setAccount', 'UA-35922789-1']);
+
+	        hash = location.hash;
+
+	        if (hash) {
+	            _gaq.push(['_trackPageview', hash.substr(1)]);
+	        } else {
+	            _gaq.push(['_trackPageview']);
+	        }
+	    } catch(err) {
+
+	    }
+
+	});
+	
 	// Juste pour le developpement
-	development();
+	//development();
 }
 
 function backKeyDown(){
