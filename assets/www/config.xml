@@ -1,0 +1,23 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<widget xmlns     = "http://www.w3.org/ns/widgets"
+        xmlns:gap = "http://phonegap.com/ns/1.0"
+        id        = "com.ryxeuf.webapp.fpcls"
+        version   = "1.0.0">
+    <name>PierreFeuilleCiseauLezardSpock</name>
+
+    <description>
+        Il s'agit d'une variante de l'application de Pierre-Feuille-Ciseau issue de la serie televisee "The Big Bang Theory".
+    </description>
+
+    <author href="http://ryxeuf.fr" email="ryxeufmedia@gmail.com">
+        RyxeufMedia
+    </author>
+
+    <feature name="http://api.phonegap.com/1.0/device" />
+
+    
+    <preference name="orientation"      value="portrait" />
+    <preference name="target-device"    value="universal" />
+    <preference name="fullscreen"       value="true" />
+
+</widget>

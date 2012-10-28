@@ -1,0 +1,162 @@
+<!DOCTYPE HTML>
+<html>
+ <head>
+  <title>PhoneGap</title>
+  <meta name="viewport" content="width=device-width, initial-scale=1, user-scalable=yes">
+  <script type="text/javascript" charset="utf-8" src="js/cordova-2.1.0.js"></script>
+  <script type="text/javascript" charset="utf-8" src="js/jquery.js"></script>
+  <script type="text/javascript" charset="utf-8" src="js/jquery.mobile.js"></script>
+  <script type="text/javascript" charset="utf-8" src="js/database.js"></script>
+  <script type="text/javascript" charset="utf-8" src="js/game.js"></script>
+  <script type="text/javascript" charset="utf-8" src="js/main.js"></script>
+  <link rel="stylesheet" type="text/css" href="css/jquery.mobile.css" />
+  <link rel="stylesheet" type="text/css" href="css/main.css" />
+ </head>
+<body> 
+	<div data-role="page" id="index"> 
+		<!-- <div data-role="header"> 
+			<h1>Pierre</h1>
+		</div>/header --> 
+		<div data-role="content"> 
+			<img src="css/images/all.png" />
+			<p>Toucher pour continuer</p> 
+		</div><!-- /content --> 
+		<!--<div data-role="footer"> 
+		</div> /footer --> 
+	</div><!-- /page -->
+	
+	<div data-role="page" id="page1" data-theme="b"> 
+		<!--<div data-role="header" data-theme="b"> 
+			<h1>Manga Reader</h1> 
+		</div> /header --> 
+		<div data-role="content"> 
+			<img src="css/images/logo.png" id="logo-screen"/>
+			<p>Pierre - Papier - Ciseau - L&eacute;zard - Spock</p>
+			<a href="#jeuchoix" data-role="button" id="oneplayer">1 joueur</a>
+			<a href="#jeuchoix" data-role="button" id="twoplayer">2 joueurs</a>
+			<br/>
+			<a href="#options" data-role="button">Options</a>
+		</div><!-- /content --> 
+	</div><!-- /page -->
+	
+	
+	
+	
+	
+	
+	
+	<div data-role="page" id="jeuchoix" data-theme="b"> 
+		<div data-role="header" data-theme="b"> 
+			<a href="#page1" data-icon="home" data-iconpos="notext"></a>
+			<h1 id="joueurname"></h1> 
+		</div><!-- /header --> 
+		<div data-role="content"> 
+			<img id="choix1" choix="1" class="choix" src="css/images/paper.png" />
+			<img id="choix2" choix="2" class="choix" src="css/images/rock.png" />
+			<img id="choix3" choix="3" class="choix" src="css/images/scisors.png" />
+			<img id="choix4" choix="4" class="choix" src="css/images/lizard.png" />
+			<img id="choix5" choix="5" class="choix" src="css/images/spock.png" />
+			
+		</div><!-- /content --> 
+	</div><!-- /page -->
+	
+	<div data-role="page" id="jeuresultat" data-theme="b"> 
+		<div data-role="header" data-theme="b"> 
+			<a href="#page1" data-icon="home" data-iconpos="notext"></a>
+			<h1><div id="nb-wins"></div> <br/><div id="nb-looses"></div></h1> 
+		</div><!-- /header --> 
+		<div data-role="content"> 
+			<div id="player-played"></div>Vs
+			<div id="versus-played"></div>
+			<br />
+			<div id="result-played"></div>
+			<br />
+			<br />
+			<a href="#jeuchoix" data-role="button">Continuer</a>
+		</div><!-- /content --> 
+		<!--<div data-role="footer" data-theme="b"> 
+			<p></p>
+		</div> /footer --> 
+	</div><!-- /page -->
+	
+	
+	
+	
+	
+	
+	
+	
+	<div data-role="page" id="options" data-theme="b"> 
+		<div data-role="header" data-theme="b"> 
+			<a href="#page1" data-icon="back" data-iconpos="notext"></a>
+			<h1>Options</h1> 
+		</div><!-- /header --> 
+		<div data-role="content"> 
+			<a href="#regles" data-role="button">R&egrave;gles</a>
+			<a href="#apropos" data-role="button">A propos</a>
+		</div><!-- /content --> 
+	</div><!-- /page -->
+	
+	<div data-role="page" id="regles" data-theme="b"> 
+		<div data-role="header" data-theme="b"> 
+			<a href="#options" data-icon="back" data-iconpos="notext"></a>
+			<h1>R&egrave;gles</h1> 
+		</div><!-- /header --> 
+		<div data-role="content"> 
+			<ul>
+				<li>La Feuille recouvre la Pierre</li>
+				<li>La Feuille r&eacute;fute Spock</li>
+				<li>La Pierre casse les Ciseaux</li>
+				<li>La Pierre &eacute;crase le L&eacute;zard</li>
+				<li>Les Ciseaux coupent la Feuille</li>
+				<li>Les Ciseaux d&eacute;capitent le L&eacute;zard</li>
+				<li>Le l&eacute;zard empoisonne Spock</li>
+				<li>Le l&eacute;zard mange la Feuille</li>
+				<li>Spock casse les Ciseaux</li>
+				<li>Spock vaporise la Pierre</li>
+			</ul>
+		</div><!-- /content --> 
+	</div><!-- /page -->
+	
+	<div data-role="page" id="apropos" data-theme="b"> 
+		<div data-role="header" data-theme="b"> 
+			<a href="#options" data-icon="back" data-iconpos="notext"></a>
+			<h1>A propos</h1> 
+		</div><!-- /header --> 
+		<div data-role="content"> 
+			<p>Le jeu a &eacute;t&eacute; cr&eacute;&eacute; par @RyxeufMultimedia</p>
+			<br />
+			<p>Version 1.0</p>
+		</div><!-- /content --> 
+	</div><!-- /page -->
+	
+	<div data-role="page" id="easteregg" data-theme="b"> 
+		<div data-role="header" data-theme="b"> 
+			<a href="#options" data-icon="back" data-iconpos="notext"></a>
+			<h1>Easter Egg</h1> 
+		</div><!-- /header --> 
+		<div data-role="content"> 
+			<img src="css/images/spock.jpg" />
+		</div><!-- /content --> 
+	</div><!-- /page -->
+	
+	
+	
+	
+	
+	
+	<div data-role="page" id="dev" data-add-back-btn=true data-theme="b"> 
+		<div data-role="header" data-theme="b"> 
+			<h1>Dev page</h1> 
+		</div><!-- /header --> 
+		<div data-role="content" data-theme="b"> 
+			<div id="test"></div>
+			<a href="" data-role="button">Test</a>
+		</div><!-- /content --> 
+		<div data-role="footer" data-theme="b"> 
+			<p></p>
+		</div><!-- /footer --> 
+	</div><!-- /page -->
+	
+</body> 
+</html>
