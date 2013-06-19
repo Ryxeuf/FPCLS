@@ -3,7 +3,6 @@
  <head>
   <title>PhoneGap</title>
   <meta name="viewport" content="width=device-width, initial-scale=1, user-scalable=yes">
-  <script type="text/javascript" charset="utf-8" src="js/cordova-2.1.0.js"></script>
   <script type="text/javascript" charset="utf-8" src="phonegap.js"></script>
   <script type="text/javascript" charset="utf-8" src="js/jquery.js"></script>
   <script type="text/javascript" charset="utf-8" src="js/jquery.mobile.js"></script>
@@ -11,6 +10,9 @@
   <script type="text/javascript" charset="utf-8" src="js/game.js"></script>
   <script type="text/javascript" charset="utf-8" src="js/main.js"></script>
   <script type="text/javascript">
+    document.addEventListener("deviceready", function(){ console.log("Device Ready !!!");}, false);
+    
+    
     var _gaq = _gaq || [];
 
     (function() {
@@ -19,7 +21,6 @@
       var s = document.getElementsByTagName('script')[0]; s.parentNode.insertBefore(ga, s);
     })();
     
-    document.addEventListener("deviceready", function(){ console.log("Device Ready !!!");}, false);
   </script>
   <link rel="stylesheet" type="text/css" href="css/jquery.mobile.css" />
   <link rel="stylesheet" type="text/css" href="css/main.css" />
